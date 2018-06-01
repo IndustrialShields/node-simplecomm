@@ -4,8 +4,13 @@
   "description": "Industrial Shields SimpleComm library for NodeJS",
   "main": "index.js",
   "scripts": {
-    "example": "node example.js"
+    "example:write-socket": "node example-write-socket.js",
+    "example:write-file": "node example-write-file.js"
   },
-  "author": "Boot&Work Corp. S.L.",
-  "license": "ISC"
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/IndustrialShields/node-simplecomm.git"
+  },
+  "author": "Jordi Casals <jcg@industrialshields.com>",
+  "license": "LGPLv3"
 }
