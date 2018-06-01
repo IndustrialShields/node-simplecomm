@@ -1,6 +1,6 @@
 {
   "name": "simplecomm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Industrial Shields SimpleComm library for NodeJS",
   "main": "index.js",
   "scripts": {
