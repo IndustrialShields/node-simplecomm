@@ -1,16 +1,17 @@
 {
-  "name": "simplecomm",
-  "version": "1.0.2",
-  "description": "Industrial Shields SimpleComm library for NodeJS",
-  "main": "index.js",
-  "scripts": {
-    "example:write-socket": "node example-write-socket.js",
-    "example:write-file": "node example-write-file.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/IndustrialShields/node-simplecomm.git"
-  },
-  "author": "Jordi Casals <jcg@industrialshields.com>",
-  "license": "LGPL-3.0"
+	"name": "simplecomm",
+	"version": "1.0.2",
+	"description": "Industrial Shields SimpleComm library for NodeJS",
+	"main": "index.js",
+	"scripts": {
+		"example:write-socket": "node examples/write-socket.js",
+		"example:write-file": "node examples/write-file.js",
+		"example:parse-fields": "node examples/parse-fields"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IndustrialShields/node-simplecomm.git"
+	},
+	"author": "Jordi Casals <jcg@industrialshields.com>",
+	"license": "LGPL-3.0"
 }

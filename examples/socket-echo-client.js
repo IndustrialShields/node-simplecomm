@@ -1,9 +1,9 @@
-var simplecomm = require('./index.js');
-var net = require('net');
+const net = require('net');
+const simplecomm = require('../index.js');
 
 simplecomm.address = 12;
 
-var client = new net.Socket();
+let client = new net.Socket();
 client.on('connect', () => {
 	console.log('connected to server');
 	simplecomm.send(client, [0x01, 0x02, 0x03, 0x04], 0, 10);

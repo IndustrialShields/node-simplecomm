@@ -1,4 +1,17 @@
+const parser = require('./parser');
+
 const SYN = 0x02;
+
+function Packet(pkt) {
+	this.destination = pkt[0];
+	this.source = pkt[1];
+	this.type = pkt[2];
+	this.data = pkt.slice(3, pkt.length - 1);
+
+	this.parse = function(format) {
+		return parser(this.data, format);
+	}
+}
 
 function calcCRC(buff) {
 	var ret = 0;
@@ -13,10 +26,10 @@ var exports = module.exports = {};
 exports.address = 0;
 
 exports.toBuffer = (data, dest, type) => {
-	if (typeof type == "undefined") {
+	if (typeof type == 'undefined') {
 		type = 0;
 	}
-	if (typeof dest == "undefined") {
+	if (typeof dest == 'undefined') {
 		dest = 0;
 	}
 
@@ -64,12 +77,7 @@ exports.fromBuffer = (buff) => {
 
 		buff = buff.slice(pkt.length + 2);
 
-		packets.push({
-			destination: pkt[0],
-			source: pkt[1],
-			type: pkt[2],
-			data: pkt.slice(3, pkt.length - 1),
-		});
+		packets.push(new Packet(pkt));
 	}
 
 	return packets;
